@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Generador de QR</title>
+    <link rel="stylesheet" href="estilos.css" type="text/css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <div id="urlView" class="view active">
+            <h1>Generador de Código QR</h1>
+            <input type="url" id="urlInput" placeholder="https://ejemplo.com" required>
+            <button onclick="saveUrlAndSwitch()">Generar QR</button>
+        </div>
+
+        <div id="qrView" class="view">
+            <h1>Tu Código QR Dinámico</h1>
+            <div id="qrContainer">
+                <div class="url-display" id="urlDisplay"></div>
+                <p class="code-label">Código de verificación:</p>
+                <div id="code"></div>
+                <div id="qrCode"></div>
+                <div>
+                    <button class="back-button" onclick="switchView()">Volver</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
